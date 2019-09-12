@@ -1,0 +1,95 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: LAM\\Lampki}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    Święta zbliżają się wielkimi krokami, dlatego Bajtek postanowił udać się do sklepu i wybrać lampki na choinkę. Wśród wielu wzorów i kolorów najbardziej urzekły go \textit{Świetliste pasy}, gdzie każda z lampek w łańcuchu świeci na jeden z $m$ kolorów oznaczonych od 1 do $m$, a dzięki specjalnemu przełącznikowi (działającemu również w tym zakresie wartości) Bajtek może zapalić jedynie te lampki, których oznaczenia kolorów należą do pewnego spójnego przedziału $[l, r]$, dla $l \leq r$. W ten sposób świecące lampki tworzą \textit{świetliste grupy} oddzielone między sobą co najmniej jedną zgaszoną lampką.
+
+    Napisz program, który powie Bajtkowi, ile łącznie świtlistych grup są w stanie wygenerować wybrane przez niego lampki, dla wszystkich możliwych przedziałów ustawionych na specjalnym przełączniku.
+
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajdują się dwie liczby całkowite $n$ i $m$, oznaczające odpowiednio liczbę światełek w łańcuchu oraz liczbę kolorów. W drugim wierszu znajduje się ciąg $n$ liczb całkowitych z przedziału od 1 do $m$, oznaczających kolejne kolory lampek w wybranym przez Bajtka łańcuchu.
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać jedną liczbę całkowitą, oznaczającą liczbę wszystkich świetlistych grup, jakie Bajtek jest w stanie uzyskać dla różnych przedziałów ustawionych na specjalnym przełączniku.  
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{3 3\\2 1 3}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{7}
+    \end{minipage}
+    
+    \vspace{2ex}
+    \noindent\textbf{Wyjaśnienie przykładu:} Liczba świetlistych grup dla poszczególnych przedziałów wynosi: [1, 1] = 1; [1, 2] = 1; [1, 3] = 1; [2, 2] = 1; [2, 3] = 2; [3, 3] = 1. 
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1 \leq n, m \leq 100$ & 10\\
+            \hline
+            2 & $1 \leq n, m \leq 2000$ & 30\\
+            \hline
+            3 & $1 \leq n, m \leq 200000$ & 60\\
+            \hline
+            
+        \end{tabular}
+    \end{center}
+
+\end{document}

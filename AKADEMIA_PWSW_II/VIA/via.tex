@@ -1,0 +1,94 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: VIA\\Via ferrata}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    W Bajmitach - największym paśmie górskim Bajtocji każdy wspinacz znajdzie coś dla siebie. Jednak spośród wszystkich dostępnych via ferrat\footnote{,,żelazna droga" - szlak turystyczny o charakterze wspinaczkowym, wyposażony dla celów autoasekuracji w stalową linę.} najbardziej obleganą jest \textit{Sci Club 18}\footnote{rzeczywista nazwa trudnej via ferraty znajdującej się w Dolomitach}, która podzielona jest na $n$ mniejszych odcinków, każdy o pewnej trudności. 
+
+    Z powyższej drogi zamierza skorzystać $m$ śmiałków, każdy o pewnym stopniu zaawansowania. Aby wspinacz był w stanie pokonać kolejny odcinek trasy jego doświadczenie musi być wyższe od trudności drogi. W przeciwnym razie wspinacz zatrzymuje się w danym miejscu na skalnej półce - dalej nie będzie mógł już iść. Jeśli pewna osoba zatrzyma się, to każda kolejna nie będzie mogła wejść wyżej - będzie musiała zatrzymać się na poprzedniej skalnej półce (kolejne fragmenty via ferraty zakończone są skalnymi półkami) w związku z ograniczonym miejscem.
+
+    Napisz program, który pomoże stwierdzić, gdzie zatrzymali się śmiałkowie.
+
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajdują się dwie liczby całkowite $n$ i $m$, oznaczające liczbę odcinków via ferraty i liczbę śmiałków. W drugim wierszu znajduje się ciąg $n$ liczb całkowitych $d_{1}, d_{2}, \ldots, d_{n}$ $(1 \leq d_{i} \leq 10^{9})$, gdzie $d_{i}$ oznacza stopień trudności $i$-tego odcinka drogi. W trzecim wierszu znajduje się $m$ liczb całkowitych $w_{1}, w_{2}, \ldots, w_{m}$ $(1 \leq w_{i} \leq 10^{9})$, gdzie $w_{i}$ oznacza poziom zaawansowania $i$-tego wspinacza.
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać jedną linię zawierającą $m$ liczb, oznaczających maksymalny numer skalnej półki jaki jest w stanie osiągnąć $i$-ty wspinacz, w kolejności podanej na wejściu.
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{4 5\\2 5 5 1\\7 6 5 4 3}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{4 3 1 0 0}
+    \end{minipage}
+    
+    \vspace{2ex}
+    \noindent\textbf{Wyjaśnienie przykładu:} Pierwszy wspinacz jest w stanie przejść całą trasę, aż do ostatniej skalnej półki. Drugi zatrzyma się na wcześniejszej półce, ponieważ ostatnią zajął pierwszy wspinacz. Trzeci ze śmiałków zatrzyma się przed odcinkiem o trudności 5, zaś każdy następny ze względu na zablokowaną skalną półkę nie będzie w stanie rozpocząć wspinaczki.
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1 \leq n, m \leq 1000$ & 30\\
+            \hline
+            2 & $1 \leq n, m \leq 100000$ & 70\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+\end{document}

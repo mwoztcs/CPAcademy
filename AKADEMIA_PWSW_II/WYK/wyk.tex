@@ -1,0 +1,107 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: WYK\\Wykopaliska}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    Nadworny archeolog króla Bajtazara prowadzi wykopaliska w Bajrucie. Obszar wykopalisk jest prostokątem, który dla uproszczenia prac archeologicznych został podzielony na $n$ rzędów i $m$ kolumn. Nadworny archeolog zlecił swoim podwładnym zestaw prac do wykonania, a teraz musi złożyć przed królem sprawozdanie z postępu prac.
+    
+    Pomóż nadwornemu archeologowi i napisz program, który dla zleconego zestawu prac wyznaczy głębokość na jaką zeszli archeologowie w każdym z sektorów.
+
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajdują się trzy liczby całkowite $n$, $m$ $(1\leq n, m\leq 100)$ i $q$ $(1\leq q\leq 200000)$, oznaczające odpowiednio liczbę rzędów (numerowane od 1 do $n$, z góry na dół), liczbę kolumn (numerowane od 1 do $m$, od lewej do prawej) i liczbę zleceń jakie wykonali archeolodzy.
+
+    W $q$ kolejnych wierszach znajdują się opisy zleconych prac. Możliwe są cztery rodzaje prac podane w następujących formatach:
+
+    \texttt{S} $r$ $c$ - pogłębienie pojedynczego sektora na przecięciu rzędu $r$ i kolumny $c$ o jedną jednostkę. 
+
+    \texttt{R} $r$ - wyrównanie wszystkich sektorów w rzędzie $r$ do głębokości najgłębszego z sektorów w tym rzędzie. 
+
+    \texttt{C} $c$ - wyrównanie wszystkich sektorów w kolumnie $c$ do głębokości najgłębszego z sektorów w tej kolumnie. 
+
+    \texttt{A} - wyrównanie wszystkich sektorów do głębokości najgłębszego z sektorów na całym obszarze wykopalisk.
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać $n$ wierszy po $m$ liczb całkowitych w każdym, oznaczające na jaką głębokość archeolodzy zeszli w każdym sektorze.
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{3 4 5\\S 1 1\\A\\S 2 3\\C 3\\R 3}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{1 1 2 1\\1 1 2 1\\2 2 2 2}
+    \end{minipage}
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1 \leq q \leq 1000$ & 20\\
+            \hline
+            2 & brak prac typu \texttt{R} i \texttt{C} & 20\\
+            \hline
+            3 & brak prac typu \texttt{C} & 20\\
+            \hline
+            4 & brak dodatkowych ograniczeń & 40\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+\end{document}
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+

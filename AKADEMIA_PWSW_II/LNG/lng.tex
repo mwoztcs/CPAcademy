@@ -1,0 +1,100 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: LNG\\Lampki - Nowa Generacja}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    W tym roku twórcy światełek choinkowych nie próżnowali i poza standardowymi światełkami, poszli z duchem czasu, kładąc nacisk na produkcję światełek w tęczowych zestawach kolorystycznych. Każdy dostępny zestaw \textit{Tęczowego blasku} składa się z ciągu $n$ lampek, każdej w jednym z $m$ kolorów (oznaczonych od 1 do $m$), oraz specjalnego przełącznika, który pozwala wyłączyć wszystkie lampki w kolorach z pewnego przedziału $[l, r]$, dla $1\leq l \leq r \leq m$. Twórcy nazywają przedział $[l, r]$ \textit{tęczowym}, jeżeli zapalone lampki tworzą tęczowy układ tj. każda kolejna zapalona lampka ma kolor nie mniejszy niż poprzednia zapalona, przeglądając łańcuch od lewej do prawej.
+    
+    Napisz program, który pomoże twórcom wyznaczyć liczbę tęczowych przedziałów dla danego zestawu światełek.
+    
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajdują się dwie liczby całkowite $n$ i $m$, oznaczające odpowiednio liczbę światełek w łańcuchu oraz liczbę kolorów. W drugim wierszu znajduje się ciąg $n$ liczb całkowitych z przedziału od 1 do $m$, oznaczających kolejne kolory lampek w danym zestawie światełek.
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać jedną liczbę całkowitą, oznaczającą liczbę wszystkich tęczowych przedziałów dla danego zestawu światełek.
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{3 3\\2 1 3}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{4}
+    \end{minipage}
+    
+    \vspace{2ex}
+    \noindent\textbf{Wyjaśnienie przykładu:} Tęczowe przedziały to: [1, 1], [1, 2], [1, 3] i [2, 3]. 
+    
+    %\vspace{1.5em}
+    %\noindent\textbf{Testy ,,ocen":}\vspace{.5ex}
+    
+    %\texttt{\textbf{1ocen:}} $n$ = 5, $m$ = 6; odpowiedź to 4;\vspace{.5ex}
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1 \leq n, m \leq 100$ & 10\\
+            \hline
+            2 & $1 \leq n, m \leq 2000$ & 30\\
+            \hline
+            3 & $1 \leq n, m \leq 200000$ & 60\\
+            \hline
+            
+        \end{tabular}
+    \end{center}
+
+\end{document}

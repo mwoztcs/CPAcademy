@@ -1,0 +1,94 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: SZA\\Szaliki}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    Bajtosia dorabia wieczorami, robiąc szaliki na drutach. Dzisiaj ma szczęście - pojawił się kupiec zainteresowany jej wyrobami. Stawia jednak warunek - wszystkie szaliki jakie kupi mają być jednakowej długości (składać się z jednakowej liczby rzędów). Kupiec oznajmił, że ma do załatwienia jeszcza kilka spraw i wróci za $m$ chwil. Bajtosia wie, że w ciągu jednej chwili jest w stanie dorobić lub spruć jeden rząd oczek szalika.
+    
+    Znając długości poszczególnych szalików pomóż Bajtosi określić ile maksymalnie szalików będzie mogła sprzedać kupcowi, kiedy ten wróci.
+
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajdują się dwie liczby całkowite $n$ i $m$ $(0\leq m\leq 10^{9})$, oznaczające liczbę szalików posiadanych przez Bajtosię oraz liczbę chwil, po których kupiec wróci do Bajtosi. W drugim wierszu znajduje się ciąg $n$ liczb całkowitych $r_{1}, r_{2}, \ldots, r_{n}$ $(1 \leq r_{i} \leq 10^{9})$, gdzie $r_{i}$ oznacza liczbę rzędów $i$-tego szalika.
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać jedną liczbę całkowitą, oznaczającą maksymalną liczbę szalików jakie Bajtosia będzie w stanie sprzedać kupcowi po niezbędnych przeróbkach.
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{5 6\\1 2 3 4 4}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{5}
+    \end{minipage}
+    
+    \vspace{2ex}
+    \noindent\textbf{Wyjaśnienie przykładu:} Bajtosia w ciągu sześciu chwil jest w stanie przerobić wszystkie szaliki do długości 2.
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1\leq n\leq 100$ & 20\\
+            \hline
+            2 & $1\leq n\leq 1000$ & 30\\
+            \hline
+            3 & $1\leq n\leq 100000$ & 50\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+\end{document}

@@ -1,0 +1,99 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: KOL\\Kolacja przy świecach}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    Właściciel jednej z najznakomitszych restauracji w całej Bajtocji musi zadbać o każdy szczegół (kwiaty, świece, wystrój), aby jego goście byli zadowoleni. W ciągu najbliższych $m$ dni w restauracji odbędą się romantyczne kolacje przy świecach. Dla każdej rezerwacji właściciel wie, ile świec będzie musiał zapalić, a dzięki swojemu długoletniemu doświadczeniu wie, że każda świeca w czasie takiej kolacji spala się o jedną jednostkę wysokości.
+    
+    Znając zestaw świec jakie posiada właściciel i wymagania gości odnośnie każdej kolacji określ na ile wieczorów wystarczy posiadany przez właściciela zestaw.
+
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajdują się dwie liczby całkowite $n$ i $m$ $(1\leq n, m\leq 10^{5})$, oznaczające odpowiednio liczbę świec i liczbę wieczorów. W kolejnym wierszu znajduje się ciąg $n$ liczb całkowitych $h_{i}$ $(1\leq h_{i}\leq 10^{5})$, oznaczający wysokości poszczególnych świec. W następnym wierszu znajduje się ciąg $m$ liczb całkowitych $c_{j}$ $(1\leq c_{j}\leq 10^{5})$, oznaczający liczbę świec potrzebnych na $j$-tą kolację.
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać jedną liczbę całkowitą, oznaczającą liczbę wieczorów na które wystarczy posiadany przez właściciela zestaw świec.
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{3 5\\1 2 5\\1 2 3 2 1}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{3}
+    \end{minipage}
+    
+    \vspace{2ex}
+    \noindent\textbf{Wyjaśnienie przykładu:} Niezależnie od tego które świece właścieciel będzie zapalał na kolejne kolacje, nie będzie posiadał dwóch świec na czwartą kolację. Wobec tego świec wystarczy jedynie na trzy pierwsze wieczory.
+    
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1 \leq n, m \leq 1000$ & 25\\
+            \hline
+            2 & wszystkie świeczki mają co najwyżej 10 różnych wysokości & 30\\
+            \hline
+            3 & brak dodatkowych ograniczeń & 45\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+\end{document}
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+

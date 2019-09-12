@@ -1,0 +1,94 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: OSP\\Ochotnicza Straż Pożarna}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    Bajhattan jest ogromnym miastem, którego sieć ulic i skrzyżowań, dzięki przezorności inżynierów, może być reprezentowana jako krata liczb całkowitych, zaś odległość pomiędzy dwoma sąsiednimi skrzyżowaniami wynosi zawsze 1 bajtometr. Ze względu na swoje pokaźne rozmiary miasto dysponuje pewną liczbą zastępów straży pożarnej, której remizy wybudowano przy skrzyżowaniach Bajhattanu. Ostatnio w mieście wybucha coraz więcej pożarów, z którymi muszą walczyć wszystkie zastępy strażaków.
+    
+    Pomóż inżynierom i wyznacz największą odległość (w bajtometrach) jaką muszą przebyć strażacy z remizy do pożaru. 
+
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajdują się dwie liczby całkowite $n$ i $q$ $(1\leq n, q\leq 200000)$, oznaczające odpowiednio liczbę zastępów straży pożarnej w mieście oraz liczbę pożarów, dla których trzeba wyznaczyć żądaną odległość. W kolejnych $n$ wierszach znajdują się pary liczb całkowitych $x_{i}$, $y_{i}$ $(-10^{8} \leq x_{i}, y_{i} \leq 10^{8})$, oznaczające położenie remiz na planie miasta. W kolejnych $q$ wierszach znajdują się pary liczb całkowitych $x_{j}$, $y_{j}$ $(-10^{8} \leq x_{j}, y_{j} \leq 10^{8})$, oznaczające położenie skrzyżowania, przy którym wybuchł pożar.
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać $q$ wierszy, w każdym jedną liczbę całkowitą, oznaczającą największą odległość jaką do przebycia mają strażacy, aby dojechać do pożaru. 
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{3 4\\0 1\\1 -1\\2 2\\2 0\\-1 -1\\1 3\\0 1}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{3\\6\\4\\3}
+    \end{minipage}
+    
+    \vspace{2ex}
+    \noindent\textbf{Wyjaśnienie przykładu:} Największą odległość do pierwszego pożaru tj. 3 bajtomatry musi przebyć pierwszy zastęp. Największą odległość do drugiego pożaru tj. 6 bajtometrów muszą pokonać strażacy z trzeciego zastępu. Największą odległość do trzeciego pożaru tj. 4 bajtometry musi przejechać drugi zastęp strażaków. Największą odległość do czwartego pożaru tj. 3 bajtometry muszą przebyć strażacy z zastępu drugiego i trzeciego.
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1 \leq n, q \leq 2000$ & 25\\
+            \hline
+            2 & $y_{i} = 0$, dla wszystkich remiz & 15\\
+            \hline
+            3 & brak dodatkowych ograniczeń & 60\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+\end{document}

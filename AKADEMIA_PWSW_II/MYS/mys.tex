@@ -1,0 +1,99 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: MYS\\Myszy}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    Ponownie odwiedzamy kota Bitoma, tym razem spotykając go polującego wraz z przyjaciółmi w pewnym długim korytarzu podzielonym na $n$ fragmentów (od 1 do $n$). Na każdym z fragmentów znajduje się pewna liczba myszy (być może zero). Każdy z $k$ kotów będzie polował na pewnym spójnym obszarze korytarza, przy czym obszary te nie będą na siebie zachodziły, aby koty nie pokłóciły się o zdobycze. Kot polujący na przedziale $[i, j]$ $(1\leq i\leq j\leq n)$ jest w stanie złapać \texttt{max($s - (j - i)^{2}$, $0$)} myszy, gdzie $s$ to łączna liczba myszy przesiadująca na fragmencie $[i, j]$ korytarza.
+    
+    Pomóż kotom wybrać najlepsze miejsca do polowania i określ ile myszy są w stanie upolować.
+    
+
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajdują się dwie liczby całkowite $n$ i $k$, oznaczające odpowiednio liczbę fragmentów, na które podzielony jest korytarz oraz liczbę polujących kotów. W kolejnym wierszu znajduje się ciąg $n$ liczb całkowitych z przedziału od 0 do $10^{6}$, oznaczający ile myszy znajduje się na każdym z odcinków korytarza.
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać jedną liczbę całkowitą, oznaczającą maksymalną liczbę myszy jakie mogą zostać złapane przez koty.
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{8 2\\1 5 1 4 3 2 7 0}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{14}
+    \end{minipage}
+    
+    \vspace{2ex}
+    \noindent\textbf{Wyjaśnienie przykładu:} Pierwszy kot poluje na odcinku od 2 do 4 łapiąc 6 z 10 myszy, zaś drugi kot poluje na odcinku od 5 do 7 łapiąc 8 z 12 myszy.
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1 \leq k \leq n \leq 10$ & 15\\
+            \hline
+            2 & $1 \leq k \leq n \leq 200$ & 30\\
+            \hline
+            3 & $1 \leq k \leq n \leq 2000$ & 55\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+\end{document}
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+

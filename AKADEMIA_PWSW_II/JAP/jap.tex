@@ -1,0 +1,102 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: JAP\\Japoński ogród}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    Zgodnie z życzeniem królowej część królewskich ogrodów zostanie przebudowana i urządzona na wzór pięknych japońskich ogrodów. W tym celu nadworny ogrodnik musi przedstawić królowej różne projekty, a zadanie to nie jest proste, ze względu na liczne zasady jakie musi spełniać taki ogród. 
+    
+    Ogród taki musi być zbudowany na planie trójkąta prostokątnego, a w jego wierzchołkach należy wybudować świątynie, które należy połączyć ścieżkami w linii prostej.
+    
+    Cały królewski ogród możne być reprezentowany jako krata liczb całkowitych. Stara świątynia stojąca w punkcie $(0, 0)$, zgodnie z życzeniem królowej, znajdzie się w jednym z wierzchołków trójkątnego ogrodu. Następna świątynia stanie w punkcie $(x, 0)$, gdzie $x$ jest pewną liczbą całkowitą. Ostatnia świątynia zostanie wybudowana w punkcie $(x, y)$ - na miejscu jednego z drzew rosnących w ogrodzie. Wszystkie trzy świątynie zostaną połączone ścieżkami (co może wiązać się z wycięciem drzew leżących na linii łączącej pewne dwie świątynie).
+    
+    Pomóż nadwornemu ogrodnikowi i wyznacz liczbę drzew jaka znajdzie się we wnętrzu ogrodu dla wszystkich możliwych położeń świątyń.
+
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajduje się jedna liczba całkowita $n$ $(1\leq n\leq 200000)$, oznaczająca liczbę drzew w ogrodzie. W $n$ kolejnych wierszach znajdują się dwie liczby całkowite $x_{i}$ i $y_{i}$ $(1\leq x_{i}, y_{i}\leq 10^{6})$, oznaczające położenie $i$-tego drzewa w królewskim ogrodzie (z oczywistych względów w jednym punkcie znajduje się co najwyżej jedno drzewo).
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać $n$ wierszy, w każdym jedną liczbę całkowitą, oznaczającą liczbę drzew znajdującą się we wnętrzu ogrodu, jeżeli ostatnia świątynia powstanie na miejscu $i$-tego drzewa.
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{4\\2 1\\3 2\\4 3\\4 2}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{0\\1\\2\\0}
+    \end{minipage}
+    
+    \vspace{2ex}
+    \noindent\textbf{Wyjaśnienie przykładu:} Pierwszy ogród: we wnętrzu nie znajduje się żadne drzewo. Drugi ogród: we wnętrzu znajduje się drzewo na pozycji $(2, 1)$. Trzeci ogród: we wnętrzu znajdują się dwa drzewa - $(2, 1)$ i $(3, 2)$. Drzewo $(4, 2)$ leży na ścieżce łączącej świątynie $(4, 3)$ i $(4, 0)$, dlatego zostanie wycięte i nie znajdzie się w ogrodzie. Czwarty ogród: we wnętrzu nie znajduje się żadne drzewo. Drzewo $(2, 1)$ będzie leżało na ścieżce łączącej świątynie $(4, 2)$ i $(0, 0)$, dlatego zosatnie wycięte i nie znajdzie się w ogrodzie.
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1\leq n\leq 1000$ & 35\\
+            \hline
+            2 & wszystkie drzewa w ogrodzie leżą na jednej prostej & 20\\
+            \hline
+            3 & brak dodatkowych ograniczeń & 45\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+\end{document}
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+

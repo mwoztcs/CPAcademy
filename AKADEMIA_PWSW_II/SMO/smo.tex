@@ -1,0 +1,102 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: SMO\\Smok}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    Ciężkie jest życie latającego smoka! Wydawałoby się, że nic prostszego – w długiej i głębokiej dolinie jest mnóstwo pastwisk ułożonych jedno za drugim. Na każdym z tych pastwisk jest pewna liczba owiec (być może zero). Nic tylko ucztować nieustannie, lecz kodeks honorowy smoków pozwala na tylko jedną ucztę dziennie polegającą na pożarciu wszystkich owiec z jednego pastwiska.
+    
+    Smok ma również inne problemy. Jeżeli przeleci nad jakimś pastwiskiem, to wszystkie owce uciekają w popłochu i już więcej się na nim nie pojawiają. Ponadto zbocza doliny są tak wysokie, że nawet smok nie jest w stanie nad nimi przelecieć. Musi on zatem lecieć wzdłuż doliny (może wybierać z której strony doliny przyleci danego dnia) i jeżeli zje owce z pastwiska $x$ to wszystkie owce z pastwisk nad którymi przelatuje ($1\ldots x−1$ albo $x+1\ldots n$) przepadają bez wieści. 
+    
+    Jest też drugi problem – pod koniec każdego dnia na każdym pastwisku stan owiec zmniejsza się o 1 w wyniku różnych przyczyn (wilki, choroby, ucieczki, pogłoski o latających smokach w okolicy). Z tego powodu smok ma nie lada problem - z których pastwisk pożerać owce, aby zjeść jak najwięcej.
+    
+    W końcu smok postanowił rozwiązać problem w sposób nowoczesny i zamówił u Ciebie program.
+
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajduje się jedna liczba całkowita $n$, oznaczająca liczbę pastwisk w dolinie. W kolejnym wierszu znajduje się ciąg $n$ liczb całkowitych $x_{i}$ $(0\leq x_{i} \leq 10^{6})$, oznaczający ile owiec znajduje się na $i$-tym pastwisku.
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać jedną liczbę całkowitą, oznaczającą ile łącznie owiec jest w stanie zjeść smok.
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{6\\3 2 9 3 7 1}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{16}
+    \end{minipage}
+    
+    \vspace{2ex}
+    \noindent\textbf{Wyjaśnienie przykładu:} Smok może nadlecieć z lewej na pastwisko nr 3, żeby pożreć 9 owiec, następnego dnia przyleci z prawej na pastwisko nr 5, żeby pożreć 6 owiec, zaś trzeciego dnia zje ostatnią owcę z pastwiska nr 4.
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1 \leq n \leq 100$ & 30\\
+            \hline
+            2 & $1 \leq n \leq 1000$ & 30\\
+            \hline
+            3 & $1 \leq n \leq 200000$ & 40\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+\end{document}
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+

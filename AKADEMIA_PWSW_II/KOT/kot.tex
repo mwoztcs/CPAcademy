@@ -1,0 +1,100 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Zadanie: KOT\\Kot}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.png}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{Akademia Programowania PWSW, dzień ?, Dostępna pamięć: 512 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    Jak powszechnie wiadomo, kiedy kota nie ma, myszy harcują, a harce te odbywają się w kuchni (kuchnia ma wymiary $n \times n$ i jest pokryta $n^{2}$ kwadratowymi płytkami), gdzie na każdej z płytek przesiaduje pewna liczba myszy (być może zero). Kot Bitom w czasie swojego polowania łapie myszy zajmujące pewne $k \times k$ płytek (nie mniej, nie więcej), a ponieważ myszy są szybkie, może on upolawać co najwyżej tyle myszy, ile znajduje się na najsłabiej okupowanej przez nie płytce.
+
+    Napisz program, który dla każdego możliwego obszaru polowania, wyznaczy ile co najwyżej myszy może złapać kot Bitom.
+
+%WEJSCIE
+
+    \section*{Wejście}
+    
+    W pierwszym wierszu standardowego wejścia znajdują się dwie liczby całkowite $n$ i $k$, oznaczające odpowiednio wymiar kuchni i obszar polowania kota Bitoma. W $n$ kolejnych wierszach znajdują się ciągi $n$ liczb całkowitych z przedziału od 0 do $10^{9}$, oznaczające ile myszy znajduje się na każdej z płytek.
+
+%WYJSCIE
+
+    \section*{Wyjście}
+    
+    Na standardowe wyjście należy wypisać $n-k+1$ wierszy po $n-k+1$ liczb całkowitych w każdym, oznaczające ile co najwyżej myszy może upolować kot Bitom w danym rejonie kuchni.
+
+%PRZYKLAD
+
+    \section*{Przykład}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        Dla danych wejściowych:\vspace{1ex}\\
+        \texttt{4 2\\0 1 2 3\\4 5 6 7\\8 9 0 1\\2 3 4 0}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        poprawnym wynikiem jest:\vspace{1ex}\\
+        \texttt{0 1 2\\4 0 0\\2 0 0}
+    \end{minipage}
+    
+    %\vspace{1.5em}
+    %\noindent\textbf{Testy ,,ocen":}\vspace{.5ex}
+    
+    %\texttt{\textbf{1ocen:}} $n$ = 5, $m$ = 6; odpowiedź to 4;\vspace{.5ex}
+    
+%OCENIANIE
+
+    \section*{Ocenianie}
+        
+    Zestaw testów dzieli się na następujące podzadania. Testy do każdego podzadania składają się z jednej lub większej liczby osobnych grup testów.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów}\\
+            \hline
+            1 & $1 \leq k \leq n \leq 100$ & 10\\
+            \hline
+            2 & $1 \leq k \leq n \leq 600$ & 30\\
+            \hline
+            3 & $1 \leq k \leq n \leq 3000$ & 60\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+\end{document}
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+
