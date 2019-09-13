@@ -1,4 +1,9 @@
-[^\.]*
+# Ignore files without dot 
+*
+!/**/
+!*.*
+
+# Ignore tex compile files
 *.log
 *.aux
 *.png
