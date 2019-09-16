@@ -7,9 +7,9 @@ int main(){
 
     ios_base::sync_with_stdio(0);
 
-    uniform_int_distribution<int> dist_n(8, 10);
+    uniform_int_distribution<int> dist_n(1990, 2000);
     int n = dist_n(gen);
-    uniform_int_distribution<int> dist_k(1, n);
+    uniform_int_distribution<int> dist_k(1000, n);
     int k = dist_k(gen);
     cout << n << " " << k << "\n";
 
