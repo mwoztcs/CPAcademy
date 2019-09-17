@@ -26,7 +26,7 @@ void processQuery(int n, vector<vector<int>>& G, vector<int>& SubSize){
     }
 
     int res = findBoxes(0, G, LookForBoxes, SubSize);
-    cout << res << "\n";
+    cout << res-m << "\n";
 }
 
 void solve(int n){

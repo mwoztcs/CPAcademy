@@ -5,11 +5,11 @@ struct Box{
     int l, r, num = 1;
 };
 
-int DFS(int u, int counter, vector<vector<int>>& G, vector<Box>& Boxes){
+int getPrePostCounter(int u, int counter, vector<vector<int>>& G, vector<Box>& Boxes){
     Boxes[u].l = counter++;
-    for(int i=0; i<G[u].size(); i++){
-        counter = DFS(G[u][i], counter, G, Boxes);
-        Boxes[u].num += Boxes[G[u][i]].num;
+    for(auto v : G[u]){
+        counter = getPrePostCounter(v, counter, G, Boxes);
+        Boxes[u].num += Boxes[v].num;
     }
     Boxes[u].r = counter++;
 
@@ -62,7 +62,7 @@ void solve(int n){
     }
 
     vector<Box> Boxes(n+1);
-    DFS(0, 0, G, Boxes);
+    getPrePostCounter(0, 0, G, Boxes);
     
     runQueries(Boxes);
 }
