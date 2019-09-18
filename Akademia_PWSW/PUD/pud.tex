@@ -10,8 +10,7 @@
 \usepackage{pdfpages}
 \DeclareGraphicsRule{.1}{mps}{*}{}
 \usepackage{epstopdf}
-
-% \newcommand{\hint}[2]{\begin{flushleft}\textbf{\ref{#1}}\quad #2\end{flushleft}}
+\usepackage{wrapfig}
 
 \usepackage{geometry}
 \geometry{a4paper, margin=2cm}
@@ -65,9 +64,14 @@
     \end{minipage}
     \begin{minipage}[t]{0.5\textwidth}
         poprawnym wynikiem jest:\vspace{1ex}\\
-        \texttt{4\\0\\0\\1\\2}
+        \texttt{4\\0\\0\\1\\2}       
     \end{minipage}
     
+    
+    \begin{wrapfigure}{r}{0.2\textwidth}
+        \vspace{-3ex}
+        \includegraphics{pudrys-1.pdf}
+    \end{wrapfigure}
     \vspace{2ex}
     \noindent\textbf{Wyjaśnienie przykładu:} Pierwsze zamówienie: W pierwszym pudełku znajdują się wszystkie pozostałe pudełka. Drugie i trzecie zamówienie: Pudełka 3, 4 i 5 nie zawierają żadnego pudełka we wnętrzu. Czwarte zamówienie: Nadmiarowe jest pudełko numer 5, które nie było zamówione. Piąte zamówienie: W pudełku numer dwa znajdują się dwa pudełka (3 i 4), których nie zamówiono.
     
