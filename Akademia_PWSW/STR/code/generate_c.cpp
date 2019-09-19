@@ -9,23 +9,23 @@ int main(){
     
     uniform_int_distribution<int> dist_n(2e5, 2e5);
     int n = dist_n(gen);
-    set<pair<int, int>> S;
-    for(int i=2; i<=n; i++){
-        uniform_int_distribution<int> dist_u(1, i-1);
-        int u = dist_u(gen);
-        S.insert({u, i});
-    }
-    uniform_int_distribution<int> dist_m(n-1, n-1);
-    int m = dist_m(gen);
     
-    while(S.size() < m){
-        uniform_int_distribution<int> dist_u(1, n);
+    set<pair<int, int>> S;
+    S.insert({1, 2});
+    vector<vector<int>> Ed(2); 
+    Ed[0].push_back(1); Ed[1].push_back(2);
+    
+    for(int i=3; i<=n; i++){
+        uniform_int_distribution<int> dist_side(0, 1);
+        int side = dist_side(gen);
+        
+        uniform_int_distribution<int> dist_u(0, Ed[side].size()-1);
         int u = dist_u(gen);
-        uniform_int_distribution<int> dist_v(1, n);
-        int v = dist_v(gen);
-        if(u != v){
-            S.insert({min(u, v), max(u, v)});
-        }
+        
+        S.insert({Ed[side][u], i});
+        
+        if(u == Ed[side].size()-1)
+            Ed[side].push_back(i);
     }
     
     vector<pair<int, int>> E;
@@ -40,4 +40,3 @@ int main(){
     
     return 0;
 }
-            
