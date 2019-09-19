@@ -6,7 +6,7 @@ int main(){
     mt19937 gen(rd());
 
     ios_base::sync_with_stdio(0);
-    uniform_int_distribution<int> dist_n(1, 1e5);
+    uniform_int_distribution<int> dist_n(1, 10);
     int n = dist_n(gen);
     cout << n << "\n";
 
@@ -16,7 +16,7 @@ int main(){
         cout << p << " ";
     } cout << "\n";
 
-    uniform_int_distribution<int> dist_q(1, 1e5);
+    uniform_int_distribution<int> dist_q(1, 10);
     int q = dist_q(gen);
     cout << q << "\n";
 
@@ -31,9 +31,14 @@ int main(){
             S.insert(x);
         }
 
-        cout << S.size() << " ";
-        for(auto it = begin(S); it != end(S); it++){
-            cout << *it << " ";
+        vector<int> P;
+        for(auto p : S)
+            P.push_back(p);
+        shuffle(begin(P), end(P), gen);
+        
+        cout << P.size() << " ";
+        for(auto p : P){
+            cout << p << " ";
         } cout << "\n";
     }
 

@@ -36,9 +36,14 @@ int main(){
             S.insert(x);
         }
 
-        cout << S.size() << " ";
-        for(auto it = begin(S); it != end(S); it++){
-            cout << *it << " ";
+        vector<int> P;
+        for(auto p : S)
+            P.push_back(p);
+        shuffle(begin(P), end(P), gen);
+        
+        cout << P.size() << " ";
+        for(auto p : P){
+            cout << p << " ";
         } cout << "\n";
     }
 
