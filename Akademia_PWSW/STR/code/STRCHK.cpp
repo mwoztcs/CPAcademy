@@ -12,22 +12,44 @@ void end(bool a, string b, int c){
 }
 
 void read(int n, int m, vector<pair<int, int>>& G){
-    int guards = 0; result >> guards;
+    int guards = 0;
+    if(!(result >> guards))
+        end(false, "Na wejściu nie podano liczby", 0);
     
-    if(guards != (m+1)/2)
+    if(guards != ((m+1)/2))
         end(false, "Liczba strażników jest nieprawidłowa", 0);
 
     vector<bool> H(m+1);
     for(int i=0; i<guards; i++){
         int room = 0, hall1 = 0, hall2 = 0;
-        result >> room >> hall1 >> hall2;
+            
+        if(!(result >> room))
+            end(false, "Na wejściu nie podano liczby", 0);
+    
+        if(!(result >> hall1))
+            end(false, "Na wejściu nie podano liczby", 0); 
         
-        hall1 = max(0, hall1);
-        hall2 = max(0, hall2);
+        if(!(result >> hall2))
+            end(false, "Na wejściu nie podano liczby", 0);
+        
+        if(hall1 == 0 || hall2 == 0)
+            end(false, "Nie ma takiego korytarza", 0);
+        
+        if(hall1 == hall2)
+            end(false, "Nie można dwa razy obserwować tego samego korytarza", 0);
+        
+        if(hall1 == -1)
+            hall1 = 0;
+        if(hall2 == -1)
+            hall2 = 0;
+        
+        if(!(0 <= hall1 && hall1 <= m && 0 <= hall2 && hall2 <= m))
+            end(false, "Nie ma takiego korytarza", 0);
+            
         H[hall1] = H[hall2] = true;
         
         if((hall1 != 0 && G[hall1].first != room && G[hall1].second != room) || (hall2 != 0 && G[hall2].first != room && G[hall2].second != room)){
-            end(false, "Strażnik nie może obserwować korytarzy wychodzących z różnych sal", 0);
+            end(false, "Korytarz nie wychodzi z podanej sali", 0);
         }
     }
 
