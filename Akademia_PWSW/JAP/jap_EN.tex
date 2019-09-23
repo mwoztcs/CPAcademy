@@ -1,0 +1,95 @@
+\documentclass[10pt]{article}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphics}
+\usepackage{pdfpages}
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\usepackage{epstopdf}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+    
+%NAGLOWEK
+
+    \noindent
+    \begin{minipage}{0.5\textwidth}
+        \LARGE{\textsf{\textbf{Task: JAP\\Japanese garden}}}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+            \includegraphics[height=1.5cm]{logo.jpg}
+        \end{flushright}
+    \end{minipage}
+    
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \noindent\textbf{PWSW Programming Academy, day II, Available memory: 128 MB.}
+    \vspace{1em}
+    
+%TRESC
+    
+    \noindent
+    As requested by a queen part of a royal garden will be redeveloped and landscape as a beautiful japanese garden. To do so court gardener has to present different projects, but such task is quite difficult, because of the amount of rules such garden has to obey.
+    
+    Japanese garden has to be built as a right triangle with temples in the corners and paths connecting them pairwise in a straight line.
+    
+    Whole royal garden can be represented as integer coordinate system. The old temple placed at $(0, 0)$, as requested by the queen, will be positioned at one of the triangular garden vertices. Next temple will be built at a position $(x, 0)$, where $x$ is an integer. The last temple will be built at $(x, y)$ - position of one of the trees in the garden. All temples will be connected by paths (this may cause that some trees will be cut down).
+    
+    Help the court gardener and count how many trees are inside a garden for every possible placement of temples.   
+
+%WEJSCIE
+
+    \section*{Input}
+    
+    The first line of the standard input contains an integer $n$ $(1\leq n\leq 2000000)$, the number of trees in the garden. Each of next $n$ lines contains a position of a tree. It consists of two space-separated integers $x_{i}$ and $y_{i}$ $(1\leq x_{i}, y_{i}\leq 10^{6})$ which represent the \texttt{x} and \texttt{y} coordinate of the $i$-th tree (obviously there is at most one tree at each $(x, y)$\,-\,coordinate).
+
+%WYJSCIE
+
+    \section*{Output}
+    
+    The standard output consists of $n$ lines. In each line print one integer, the number of trees inside the garden if the temple would be built at the position of the $i$-th tree.
+    
+%PRZYKLAD
+
+    \section*{Example}
+    
+    \noindent
+    \begin{minipage}[t]{0.5\textwidth}
+        For the input data:\vspace{1ex}\\
+        \texttt{4\\2 1\\3 2\\4 3\\4 2}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        a correct result is:\vspace{1ex}\\
+        \texttt{0\\1\\2\\0}
+    \end{minipage}
+    
+    \vspace{2ex}
+    \noindent\textbf{Explanation of the example:} First garden: there are no trees inside. Second garden: inside this garden there is a tree at a position $(2, 1)$. Third garden: there are two trees in a garden - $(2, 1)$ and $(3, 2)$. Tree at a position $(4, 2)$ lies on a path between two temples - $(4, 3)$, $(4, 0)$, hence will be cut down. Fourth garden: there are no trees inside. Tree at a position $(2, 1)$ lies on a path between temples $(4, 2)$ and $(0, 0)$, hence will be cut down.
+    
+%OCENIANIE
+
+    \section*{Grading}
+        
+    The test set is divided into the following subtasks with additional constraints. Tests in each of the subtasks consist of one or more separate test groups. Each test group may contain one or more test cases.
+    
+    \begin{center}
+        \begin{tabular}{ |c|p{9cm}|c| }
+            \hline
+            \textbf{Subtask} & \textbf{Constraints} & \textbf{Points}\\
+            \hline
+            1 & $1\leq n\leq 1000$ & 35\\
+            \hline
+            2 & all trees in the garden lie on a straight line & 20\\
+            \hline
+            3 & no additional constraints & 45\\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+\end{document}
