@@ -6,7 +6,7 @@ int main(){
     mt19937 gen(rd());
 
     ios_base::sync_with_stdio(0);
-    uniform_int_distribution<int> dist_n(2e5, 2e5);
+    uniform_int_distribution<int> dist_n(500, 1000);
     int n = dist_n(gen);
 
     set<pair<int, int>> S;
