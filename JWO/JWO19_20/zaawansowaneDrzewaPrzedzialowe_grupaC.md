@@ -2,7 +2,12 @@
 
 Poniżej znajdują się notatki z Jagiellońskich Warsztatów Olimpijskich, dotyczące zaawansowanych drzew przedziałowych dla grupy C.
 
-## Przykładowa implementacja drzewa przedział-przedział
+1. [Przykładowa implementacja drzewa przedział-przedział](#segment-tree-implementation)
+2. [Fenwick Tree](#fenwick-tree)
+3. [Chińskie drzewa przedziałowe](#max-plus-problem)
+4. [Przykłady zadań z wykorzystaniem zaawansowanych drzew przedziałowych](#problems)
+
+## Przykładowa implementacja drzewa przedział-przedział <a name="segment-tree-implementation"></a>
 
 Poniżej pokażemy przykładową implementację drzewa przedział-przedział dla problemu `(+, max)`. W tym przypadku wartości drzewa będziemy trzymać w tablicy `Tree[]`, zaś wartości lazy, do późniejszej propagacji, w tablicy `Lazy[]`.
 
@@ -79,12 +84,12 @@ struct Node {
 
 Widzimy, że sposobów implementacji jest dużo i najlepiej wybrać taki, który najlepiej odpowiada naszym potrzebom.
 
-Poniżej znajdują się linki do innych źródeł, w których można znaleźć różne informacje odnośnie drzew przedział-przedział
+Poniżej znajdują się linki do innych źródeł, w których można znaleźć różne informacje odnośnie drzew przedział-przedział:
 
 * [Competitive Programmer's Handbook - Chapter 28](https://cses.fi/book/book.pdf)
 * [CP-Algorithms - Segment Tree](https://cp-algorithms.com/data_structures/segment_tree.html)
 
-## Fenwick Tree
+## Fenwick Tree <a name="fenwick-tree"></a>
 
 W czasie zajęć wspominaliśmy również o nieco innym drzewie, znanym jako drzewo Fenwicka (ang. Fenwick tree) lub drzewo indeksowane binarnie (ang. binary indexed tree). Drzewo to sprawdza się bardzo dobrze, gdy chcemy wykonywać operację punkt-przedział, ponieważ działa ono dla dowolnej operacji łącznej, a ponadto jest prostsze w implementacji i zużywa mniej pamięci - potrzebujemy jedynie `n + O(1)` komórek pamięci.
 
@@ -146,21 +151,21 @@ int query(int x){
 }
 ```
 
-Poniżej znajduje się link do zadania z Olimpiady Informatycznej, które opierało się na wykorzystaniu drzewa Fenwicka.
+Poniżej znajduje się link do zadania z Olimpiady Informatycznej, które opierało się na wykorzystaniu drzewa Fenwicka:
 
 * [Rozliczenia - XXVI OI, etap II, dzień próbny](https://szkopul.edu.pl/problemset/problem/7feyJYY7uz_g6iGLS_QPwJVG/site/?key=statement)
 
 
-## Chińskie drzewa przedziałowe
+## Chińskie drzewa przedziałowe <a name="max-plus-problem"></a>
 
-Poniżej znajdują się dwa artykuły dotyczące problemu `(max, +)` na drzewach przedział-przedział. W pierwszym artykule można znaleźć rozwiązanie problemu z wykorzystaniem struktur kubełkowych, zaś w drugim, rozwiązanie wykorzystujące chińskie drzewa przedziałowe. Aby jeszcze bardziej docenić drugi pomysł, zalecamy czytanie artykułów w podanej kolejności.
+Poniżej znajdują się dwa artykuły dotyczące problemu `(max, +)` na drzewach przedział-przedział. W pierwszym artykule można znaleźć rozwiązanie problemu z wykorzystaniem struktur kubełkowych, zaś w drugim, rozwiązanie wykorzystujące chińskie drzewa przedziałowe. Aby jeszcze bardziej docenić drugi pomysł, zalecamy czytanie artykułów w podanej kolejności:
 
 * [Złośliwy problem (max, +) i kubełkowe struktury danych](http://www.deltami.edu.pl/temat/informatyka/algorytmy/2013/03/30/problem-max.pdf)
 * [Problem (max, +) kontratakuje](http://www.deltami.edu.pl/temat/informatyka/algorytmy/2018/08/26/2018-09-delta-iko.pdf)
 
 
-## Przykłady zadań z wykorzystaniem zaawansowanych drzew przedziałowych
+## Przykłady zadań z wykorzystaniem zaawansowanych drzew przedziałowych <a name="problems"></a>
 
-Poniżej znajduje się link do artykułu o zadaniu z sortowaniem przedziałów, o którym pokrótce opowiedzieliśmy w jednej z grup.
+Poniżej znajduje się link do artykułu o zadaniu z sortowaniem przedziałów, o którym pokrótce opowiedzieliśmy w jednej z grup:
 
 * [Hacker Cups and Balls](http://www.deltami.edu.pl/temat/informatyka/algorytmy/2017/09/20/Hacker_Cups_and_Balls/)
